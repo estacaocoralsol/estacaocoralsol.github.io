@@ -1,0 +1,56 @@
+.row {
+  display: flex;
+  flex-wrap: inherit;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  .row {
+    flex-wrap: wrap !important;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .row {
+    flex-wrap: wrap !important;
+  }
+}
+
+.header {
+ background: url("assets/logo.jpeg") no-repeat center /contain; 
+ max-width: 100%;
+ min-height: 100px;
+ max-height: 220px;
+ height: 15%;
+ position: relative;
+}
+
+.container {
+  position: absolute;
+  height: 100%;
+}
